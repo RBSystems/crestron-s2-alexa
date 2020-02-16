@@ -1,6 +1,6 @@
 # Alexa S2 Crestron
 
-A C# application used to control Crestron Series 2 processors with Amazon Alexa voice commands. 
+A proof-of-concept project demonstrating the control of a Crestron Series 2 processors using Amazon Alexa voice commands. 
 
 ## Requirements to Run
 
