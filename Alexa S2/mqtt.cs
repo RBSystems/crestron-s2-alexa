@@ -4,75 +4,86 @@ using MQTTnet.Client.Options;
 using MQTTnet.Extensions.ManagedClient;
 using System.Threading.Tasks;
 using System;
-using System.Text;  
+using System.Text;
+using Crestron;
 
-public class MQTTClient
+
+namespace MQTT
 {
+    public class MQTTMessage
+	{
+		public string command { get; set; }
+		public string parameters { get; set; }
+	}
 
-    private static IManagedMqttClient client;
-
-    public Action<string, string> ProcessMQTTMessage { get; set; }
-
-    public async Task ConnectAsync(string mqttURI, int mqttPort, string mqttUser = "", string mqttPassword = "", bool mqttSecure = false)
+    public class MQTTClient
     {
-        string clientId = Guid.NewGuid().ToString();
+        private static IManagedMqttClient client;
 
-        var messageBuilder = new MqttClientOptionsBuilder()
-            .WithClientId(clientId)
-            //.WithCredentials(mqttUser, mqttPassword)
-            .WithTcpServer(mqttURI, mqttPort)
-            .WithCleanSession();
+        public Action<string, string> MQTTDataHandler { get; set; }
 
-        var options = mqttSecure
-            ? messageBuilder
-            .WithTls()
-            .Build()
-            : messageBuilder
-            .Build();
-
-        var managedOptions = new ManagedMqttClientOptionsBuilder()
-            .WithAutoReconnectDelay(TimeSpan.FromSeconds(5))
-            .WithClientOptions(options)
-            .Build();
-
-        client = new MqttFactory().CreateManagedMqttClient();
-
-        client.UseConnectedHandler(e =>
+        public async Task ConnectAsync(string mqttURI, int mqttPort, string mqttUser = "", string mqttPassword = "", bool mqttSecure = false)
         {
-            Console.WriteLine("Connected successfully with MQTT Brokers. {0}", e.AuthenticateResult);
-        });
-        client.UseDisconnectedHandler(e =>
-        {
-            Console.WriteLine("Disconnected from MQTT Brokers. {0}", e.Exception);
-        });
+            string clientId = Guid.NewGuid().ToString();
 
-        await client.StartAsync(managedOptions);
+            var messageBuilder = new MqttClientOptionsBuilder()
+                .WithClientId(clientId)
+                //.WithCredentials(mqttUser, mqttPassword)
+                .WithTcpServer(mqttURI, mqttPort)
+                .WithCleanSession();
 
-        client.UseApplicationMessageReceivedHandler(e =>
-        {
-            try
+            var options = mqttSecure
+                ? messageBuilder
+                .WithTls()
+                .Build()
+                : messageBuilder
+                .Build();
+
+            var managedOptions = new ManagedMqttClientOptionsBuilder()
+                .WithAutoReconnectDelay(TimeSpan.FromSeconds(5))
+                .WithClientOptions(options)
+                .Build();
+
+            client = new MqttFactory().CreateManagedMqttClient();
+
+            client.UseConnectedHandler(e =>
             {
-                string topic = e.ApplicationMessage.Topic;
-                if (string.IsNullOrWhiteSpace(topic) == false)
+                Console.WriteLine("Connected successfully with MQTT Brokers. {0}", e.AuthenticateResult);
+            });
+            client.UseDisconnectedHandler(e =>
+            {
+                Console.WriteLine("Disconnected from MQTT Brokers. {0}", e.Exception);
+            });
+
+            await client.StartAsync(managedOptions);
+
+            client.UseApplicationMessageReceivedHandler(e =>
+            {
+                try
                 {
-                    string payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-                    Console.WriteLine($"Topic: {topic}. Message Received: {payload}");
+                    string topic = e.ApplicationMessage.Topic;
+                    if (string.IsNullOrWhiteSpace(topic) == false)
+                    {
+                        string payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+                        Console.WriteLine($"Topic: {topic}. Message Received: {payload}");
 
-                    // Pass the topic and payload back to the parent program for processing
-                    ProcessMQTTMessage(topic, payload);
+                        // Pass the topic and payload back to the parent program for processing
+                        MQTTDataHandler(topic, payload);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message, ex);
-            }
-        });
-    }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message, ex);
+                }
+            });
+        }
 
-    public async Task SubscribeAsync(string topic, int qos = 1) =>
-        await client.SubscribeAsync(new TopicFilterBuilder()
-            .WithTopic(topic)
-            .WithQualityOfServiceLevel((MQTTnet.Protocol.MqttQualityOfServiceLevel)qos)
-            .Build());
+        public async Task SubscribeAsync(string topic, int qos = 1) =>
+            await client.SubscribeAsync(new TopicFilterBuilder()
+                .WithTopic(topic)
+                .WithQualityOfServiceLevel((MQTTnet.Protocol.MqttQualityOfServiceLevel)qos)
+                .Build());
+
+    }
 
 }
