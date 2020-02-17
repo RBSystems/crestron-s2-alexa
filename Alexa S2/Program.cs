@@ -33,11 +33,12 @@ namespace Alexa_S2
 			// Connect to MQTT (AWS Message Bus)
 			Console.WriteLine("Connecting to MQTT Server...");
 			// Add a mqtt message handler
-			mqtt.MQTTDataHandler = new Action<string, string>(MQTTDataHandler);
+			mqtt.MQTTDataHandler = new Action<string>(MQTTDataHandler);
 			// connect
-			await mqtt.ConnectAsync(mqttURI, mqttPort);
+			//await mqtt.ConnectAsync(mqttURI, mqttPort);
 			// subscribe to a topic
-			await mqtt.SubscribeAsync(mqttTopic);
+			//await mqtt.SubscribeAsync(mqttTopic);
+			mqtt.Connect();
 
 						
 			// Connect to Crestron Processor
@@ -54,23 +55,23 @@ namespace Alexa_S2
 			// Do something with the data here
 		}
 
-		private static void MQTTDataHandler(string topic, string payload)
+		private static void MQTTDataHandler(string message)
 		{
 			Console.WriteLine("MQTT Message :");
-			Console.WriteLine("{0} : {1}", topic, payload);
+			//Console.WriteLine("{0} : {1}", topic, payload);
 
 			//MQTTMessage msg = JsonSerializer.Deserialize<MQTTMessage>(payload);
 			//sendCrestronData(msg.data_type, msg.data_id, msg.value);
 
-			if (payload == "heartbeat")
+			if (message == "heartbeat")
 			{
 				crestron.heartbeatRequest();
 			}
-			else if (payload == "volume_up")
+			else if (message == "volume_up")
 			{
 				volumeUp();
 			}
-			else if (payload == "volume_down")
+			else if (message == "volume_down")
 			{
 				volumeDown();
 			}
