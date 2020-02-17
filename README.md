@@ -16,15 +16,13 @@ A proof-of-concept project demonstrating the control of a Crestron Series 2 proc
     - dotnet add '.\Alexa S2\Alexa S2.csproj' package MQTTnet.Extensions.ManagedClient --version 3.0.8
 
 ## MQTT Message Format
-MQTT Message format:
 
 Topic: *crestron*
 
-Payload: 
-```json
-{
-    "data_type": <int>[0="digital", 1="analog", or 2="serial"],
-    "data_id": <int>[xpanel element id],
-    "value": <str>[xpanel element value ("true"/"false" for digital button)]
-}
-```
+Payload: *\<command\>*
+
+
+### Available commands
+- "volume_up" : Press and release the button used to increase the volume.
+- "volume_down" : Press and release the button used to descrease the volume.
+- "heartbeat" : send a heartbeat (normally not used but good for testing)
