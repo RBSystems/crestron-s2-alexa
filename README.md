@@ -12,3 +12,19 @@ A proof-of-concept project demonstrating the control of a Crestron Series 2 proc
 
 - MQTTNet is required for MQTT message bus support and can be added using the dotnet package manager:
     - dotnet add '.\Alexa S2\Alexa S2.csproj' package MQTTnet --version 3.0.8
+- MQTT ManagedClient extension - gives the client added functionality like auto reconnect.
+    - dotnet add '.\Alexa S2\Alexa S2.csproj' package MQTTnet.Extensions.ManagedClient --version 3.0.8
+
+## MQTT Message Format
+MQTT Message format:
+
+Topic: *crestron*
+
+Payload: 
+```json
+{
+    "data_type": <int>[0="digital", 1="analog", or 2="serial"],
+    "data_id": <int>[xpanel element id],
+    "value": <str>[xpanel element value ("true"/"false" for digital button)]
+}
+```

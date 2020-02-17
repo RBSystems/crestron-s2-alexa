@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jhowell\\Desktop\\Alexa S2\\Alexa S2\\Alexa S2.csproj": {}
+    "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jhowell\\Desktop\\Alexa S2\\Alexa S2\\Alexa S2.csproj": {
+    "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jhowell\\Desktop\\Alexa S2\\Alexa S2\\Alexa S2.csproj",
+        "projectUniqueName": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj",
         "projectName": "Alexa S2",
-        "projectPath": "C:\\Users\\jhowell\\Desktop\\Alexa S2\\Alexa S2\\Alexa S2.csproj",
-        "packagesPath": "C:\\Users\\jhowell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jhowell\\Desktop\\Alexa S2\\Alexa S2\\obj\\",
+        "projectPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj",
+        "packagesPath": "C:\\Users\\Craig\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jhowell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Craig\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MQTTnet": {
+              "target": "Package",
+              "version": "[3.0.8, )"
+            },
+            "MQTTnet.Extensions.ManagedClient": {
+              "target": "Package",
+              "version": "[3.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

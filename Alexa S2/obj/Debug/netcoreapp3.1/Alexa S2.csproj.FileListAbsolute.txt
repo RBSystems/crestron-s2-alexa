@@ -20,3 +20,17 @@ C:\Users\jhowell\Desktop\Alexa S2\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.runt
 C:\Users\jhowell\Desktop\Alexa S2\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.runtimeconfig.dev.json
 C:\Users\jhowell\Desktop\Alexa S2\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.dll
 C:\Users\jhowell\Desktop\Alexa S2\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.pdb
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.exe
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.deps.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.runtimeconfig.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.runtimeconfig.dev.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Alexa S2.pdb
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.csprojAssemblyReference.cache
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.AssemblyInfoInputs.cache
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.AssemblyInfo.cs
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.pdb
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\MQTTnet.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\MQTTnet.Extensions.ManagedClient.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.csproj.CopyComplete
