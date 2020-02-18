@@ -23,7 +23,7 @@ namespace Alexa_S2
 		static AsynchronousClient crestron = new AsynchronousClient();
 		static MQTTClient mqtt = new MQTTClient();
 
-		private static async Task Main(string[] args)
+		private static void Main(string[] args)
 		{
 			// Connect to MQTT (AWS Message Bus)
 			Console.WriteLine("Connecting to MQTT Server...");
