@@ -17,11 +17,11 @@ This app translates AWs IoT MQTT messages into Crestron Seris 2 xpanel commands.
 
 Note: You must verify the xpanel button ids are correct or update them within the Program.cs source:
 ```
-	public enum CrestronButtonID
-	{
-		volume_up = 6,
-		volume_down = 7
-	};
+public enum CrestronButtonID
+{
+    volume_up = 6,
+    volume_down = 7
+};
 ```
 
 - Build the Alexa S2 App (C# App)
