@@ -30,9 +30,6 @@ namespace Alexa_S2
 			// Add a mqtt message handler
 			mqtt.MQTTDataHandler = new Action<string>(MQTTDataHandler);
 			// connect
-			//await mqtt.ConnectAsync(mqttURI, mqttPort);
-			// subscribe to a topic
-			//await mqtt.SubscribeAsync(mqttTopic);
 			mqtt.Connect();
 			
 			// Connect to Crestron Processor
@@ -52,10 +49,6 @@ namespace Alexa_S2
 		private static void MQTTDataHandler(string message)
 		{
 			Console.WriteLine("MQTT Message :");
-			//Console.WriteLine("{0} : {1}", topic, payload);
-
-			//MQTTMessage msg = JsonSerializer.Deserialize<MQTTMessage>(payload);
-			//sendCrestronData(msg.data_type, msg.data_id, msg.value);
 
 			if (message == "heartbeat")
 			{
