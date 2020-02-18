@@ -100,10 +100,10 @@ This lambda function receives Intents from the Alexa Skill below and publishes A
 ## Testing the System
 Once the App is built and running, the lambda function is created, and the Alexca Skill is created and installed, it's ready to test.
 
-- Add the Skill to Alexa by saying 'open <crestron skill name>' or through the [Alexa Dashboard](https://alexa.amazon.com/spa/index.html#skills/your-skills)
+- Add the Skill to Alexa by saying 'open \<crestron skill name\>' or through the [Alexa Dashboard](https://alexa.amazon.com/spa/index.html#skills/your-skills)
 - Say a command:
-  - 'Alexa, tell <invocation name> to turn the volume up'
-  - 'Alexa, tell <invocation name> to turn the volume down'
+  - 'Alexa, tell \<invocation name\> to turn the volume up'
+  - 'Alexa, tell \<invocation name\> to turn the volume down'
 - Verify that the volume increases/decreases.
 
 ## Development Requirements
