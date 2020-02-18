@@ -15,6 +15,15 @@ A proof-of-concept project demonstrating the control of a Crestron Series 2 proc
 ### Alexa S2 App (crestron-s2-alexa\Alexa S2)
 This app translates AWs IoT MQTT messages into Crestron Seris 2 xpanel commands. 
 
+Note: You must verify the xpanel button ids are correct or update them within the Program.cs source:
+```
+	public enum CrestronButtonID
+	{
+		volume_up = 6,
+		volume_down = 7
+	};
+```
+
 - Build the Alexa S2 App (C# App)
 ```
 PS >dotnet.exe build Alexa S2.csproj /property:GenerateFullPaths=true /consoleloggerparameters:NoSummary
@@ -59,11 +68,6 @@ This skill processes voice commands from Echo devices and invokes the above lamb
 ### AWS Lambda (crestron-s2-alexa/Crestron lambda)
 This lambda function receives Intents from the Alexa Skill below and publishes AWS IoT Messages.
 
-- build/zip the lambda function
-```
-PS src\crestronControl> dotnet lambda package -c Release -o ../CrestronLambda.zip -f netcoreapp2.1
-```
-
 - Login to [AWS Lambda Console](https://console.aws.amazon.com/lambda)
 
 - 'Create Function'
@@ -76,11 +80,31 @@ PS src\crestronControl> dotnet lambda package -c Release -o ../CrestronLambda.zi
   - Select 'Alexa Skills Kit'
   - Enter the Skill Id from the Skill noted above.
 
+- Add the Function code
+    - build/zip the lambda function
+    ```
+    PS src\crestronControl> dotnet lambda package -c Release -o ../CrestronLambda.zip -f netcoreapp2.1
+    ```
+
+    - Select '.Net Core 2.1' Runtime
+    - Upload the zip file produced from the Build above.
+    - Enter the 'Handler' in the format: assembly::namespace.class-name::method-name. (e.g. 'crestronControl::crestronControl.Function::FunctionHandler')
+
+- Click 'Save'
 
 - Connect Alexa Skill to Lambda
   - Return to your Crestron Alexa Skill within the [Alexa Developer Console](https://developer.amazon.com/alexa/console)
   - Add an Endpoint
     - Enter the ARN for the lambda function above in the 'Default Region' field.
+
+## Testing the System
+Once the App is built and running, the lambda function is created, and the Alexca Skill is created and installed, it's ready to test.
+
+- Add the Skill to Alexa by saying 'open <crestron skill name>' or through the [Alexa Dashboard](https://alexa.amazon.com/spa/index.html#skills/your-skills)
+- Say a command:
+  - 'Alexa, tell <invocation name> to turn the volume up'
+  - 'Alexa, tell <invocation name> to turn the volume down'
+- Verify that the volume increases/decreases.
 
 ## Development Requirements
 

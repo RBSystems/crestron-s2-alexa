@@ -110,20 +110,24 @@ namespace crestronControl
 
             mqtt.Connect();
 
-            mqtt.Publish("volume_up");
-            Console.WriteLine($"Published: volume_up");
-            
-            
             switch (intentRequest.Intent.Name)
             {
                 case "VolumeUpIntent":
-                    innerResponse = new SsmlOutputSpeech();
-                    (innerResponse as SsmlOutputSpeech).Ssml = "Volume Up";
+                    mqtt.Publish("volume_up");
+                    Console.WriteLine($"Published: volume_up");
+
+                    //innerResponse = new SsmlOutputSpeech();
+                    //(innerResponse as SsmlOutputSpeech).Ssml = "Volume Up";
+                    (innerResponse as PlainTextOutputSpeech).Text = "Crestron Volume Increased";
                     response.Response.ShouldEndSession = true;
                     break;
                 case "VolumeDownIntent":
-                    innerResponse = new SsmlOutputSpeech();
-                    (innerResponse as SsmlOutputSpeech).Ssml = "Volume Down";
+                    mqtt.Publish("volume_down");
+                    Console.WriteLine($"Published: volume_down");
+
+                    //innerResponse = new SsmlOutputSpeech();
+                    //(innerResponse as SsmlOutputSpeech).Ssml = "Volume Down";
+                    (innerResponse as PlainTextOutputSpeech).Text = "Crestron Volume Decreased";
                     response.Response.ShouldEndSession = true;
                     break;
                 case AlexaConstants.CancelIntent:
