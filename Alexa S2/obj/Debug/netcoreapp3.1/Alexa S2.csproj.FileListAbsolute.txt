@@ -35,3 +35,5 @@ C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\MQTT
 C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\MQTTnet.Extensions.ManagedClient.dll
 C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alexa S2.csproj.CopyComplete
 C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\M2Mqtt.Net.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\certs\AmazonRootCA1.crt
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\certs\bf1d861d1b-certificate.pem.crt.pfx

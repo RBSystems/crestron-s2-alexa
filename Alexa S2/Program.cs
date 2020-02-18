@@ -20,11 +20,6 @@ namespace Alexa_S2
 		public const int port = 41790;
 		public const int passcode = 1234;
 
-		// MQTT Configuration
-		const string mqttURI = "broker.hivemq.com";
-        const int mqttPort = 1883;
-		const string mqttTopic = "264b17c7-3fde-46bc-b46f-8af76ee6d445";
-
 		static AsynchronousClient crestron = new AsynchronousClient();
 		static MQTTClient mqtt = new MQTTClient();
 
@@ -39,8 +34,7 @@ namespace Alexa_S2
 			// subscribe to a topic
 			//await mqtt.SubscribeAsync(mqttTopic);
 			mqtt.Connect();
-
-						
+			
 			// Connect to Crestron Processor
 			Console.WriteLine("Connecting to Crestron Processor...");
 			// Add a crestron message handler

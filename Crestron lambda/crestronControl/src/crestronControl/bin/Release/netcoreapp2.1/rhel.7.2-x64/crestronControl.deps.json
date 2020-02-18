@@ -1,0 +1,112 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1/rhel.7.2-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {},
+    ".NETCoreApp,Version=v2.1/rhel.7.2-x64": {
+      "crestronControl/1.0.0": {
+        "dependencies": {
+          "Alexa.NET": "1.12.0",
+          "Amazon.Lambda.Core": "1.1.0",
+          "Amazon.Lambda.Serialization.Json": "1.7.0",
+          "M2Mqtt": "4.3.0"
+        },
+        "runtime": {
+          "crestronControl.dll": {}
+        }
+      },
+      "Alexa.NET/1.12.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Alexa.NET.dll": {
+            "assemblyVersion": "1.12.0.0",
+            "fileVersion": "1.12.0.0"
+          }
+        }
+      },
+      "Amazon.Lambda.Core/1.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Amazon.Lambda.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Amazon.Lambda.Serialization.Json/1.7.0": {
+        "dependencies": {
+          "Amazon.Lambda.Core": "1.1.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "M2Mqtt/4.3.0": {
+        "runtime": {
+          "lib/net45/M2Mqtt.Net.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "crestronControl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Alexa.NET/1.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5IQGgxtxL+7CO0wjH/Pt5pl+fJzU+A9zT7Kzohe7/EBMi0sSiUT7CAdKkvGW5VjQ9a6MoYQjcroD0CZY15FTcQ==",
+      "path": "alexa.net/1.12.0",
+      "hashPath": "alexa.net.1.12.0.nupkg.sha512"
+    },
+    "Amazon.Lambda.Core/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ueGId8b4DEHoVWkHDs3iAJH8IUSAUGu5AqkoI/Syl4RuByzik7lz9IjoImiGAlGhtsQV02MHNeTo04IFjS37gQ==",
+      "path": "amazon.lambda.core/1.1.0",
+      "hashPath": "amazon.lambda.core.1.1.0.nupkg.sha512"
+    },
+    "Amazon.Lambda.Serialization.Json/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2PD+JZnLuCnP3f8sTZEGyVexeVWxIJqQbVUbZJIEjrElE8Dbx0zTMXxKr1w1AdhRsZvL3HXpIvYywRHChPQig==",
+      "path": "amazon.lambda.serialization.json/1.7.0",
+      "hashPath": "amazon.lambda.serialization.json.1.7.0.nupkg.sha512"
+    },
+    "M2Mqtt/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2A1uM20uxuovQKPA0dkZUqD9gUpIMaX7KxdLiVM7IEXdPRL709hGuudHnvlDxm2/6b2LcOjshrYGVG9vdpipag==",
+      "path": "m2mqtt/4.3.0",
+      "hashPath": "m2mqtt.4.3.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    }
+  }
+}

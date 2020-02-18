@@ -1,0 +1,12 @@
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\obj\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.csprojAssemblyReference.cache
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\obj\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.AssemblyInfoInputs.cache
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\obj\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.AssemblyInfo.cs
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.deps.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.runtimeconfig.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.runtimeconfig.dev.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.pdb
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\obj\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.dll
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\obj\Release\netcoreapp2.1\rhel.7.2-x64\crestronControl.pdb
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\certs\AmazonRootCA1.crt
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron lambda\crestronControl\src\crestronControl\bin\Release\netcoreapp2.1\rhel.7.2-x64\certs\bf1d861d1b-certificate.pem.crt.pfx

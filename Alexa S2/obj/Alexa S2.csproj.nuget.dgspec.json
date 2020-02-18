@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\Craig\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Craig\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
