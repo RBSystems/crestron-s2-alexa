@@ -95,7 +95,7 @@ namespace crestronControl
         /// <returns>string</returns>
         private string SsmlDecorate(string speech)
         {
-            return "<speak>" + speech + "</speak>";
+            return @"<speak>" + speech + "</speak>";
         }
 
         /// <summary>
@@ -145,7 +145,8 @@ namespace crestronControl
                     break;
 
                 default:
-                    (innerResponse as PlainTextOutputSpeech).Text = "What would you like to do?"; 
+                    innerResponse = new SsmlOutputSpeech();
+                    (innerResponse as SsmlOutputSpeech).Ssml =  @"<voice name=""Hans""><amazon:emotion name=""disappointed"" intensity=""high"">Shyzuh! I don't understand! What do you want from me?</amazon:emotion></voice>";
                     break;
             }
             if (innerResponse.Type == AlexaConstants.SSMLSpeech)

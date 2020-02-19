@@ -9,8 +9,40 @@ A proof-of-concept project demonstrating the control of a Crestron Series 2 proc
     - TCP port 41790 open (opens when an xpanel is programmed on it)
 - AWS Developer Account
 - C# Development enviornment
+- [.NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.1.803-windows-x64-installer) installed
+- Clone this repo locally
 
 ## Deployment
+
+### AWS IoT (MQTT)
+This is the MQTT Message queue used by both the Alexa S2 app and the Lambda function.
+
+- Login to [AWS IoT Core Console](https://console.aws.amazon.com/iot/home)
+
+- Create a new Policy
+  - 'Secure'
+  - 'Policies'
+  - 'Create'
+  - Provide a 'Name'
+  - Enter:
+    - Action: "iot:Publish, iot:Subscribe, iot:Connect, iot:Receive"
+    - Resource ARN: "*"
+  - 'Create'
+
+- Create a 'Thing'
+  - 'Manage'
+  - 'Things'
+  - 'Create' a new Thing
+  - Give it a 'Name' (e.g. Crestron)
+  - Create a new 'Type'
+  - Give the Type a 'Name'
+  - 'Create thing type'
+  - 'Create Certificate' with One-Click certificate creation.
+  - Download all 3 certs and the root CA for AWs IoT.
+  - 'Activate'
+  - 'Attach Policy'
+  - Select the policy from above.
+
 
 ### Alexa S2 App (crestron-s2-alexa\Alexa S2)
 This app translates AWs IoT MQTT messages into Crestron Seris 2 xpanel commands. 
@@ -98,17 +130,13 @@ This lambda function receives Intents from the Alexa Skill below and publishes A
     - Enter the ARN for the lambda function above in the 'Default Region' field.
 
 ## Testing the System
-Once the App is built and running, the lambda function is created, and the Alexca Skill is created and installed, it's ready to test.
+Once the AWS IoT Thing is created, the Alexa S2 App is built and running, the lambda function is created, and the Alexa Skill is created, it's ready to test.
 
 - Add the Skill to Alexa by saying 'open \<crestron skill name\>' or through the [Alexa Dashboard](https://alexa.amazon.com/spa/index.html#skills/your-skills)
 - Say a command:
   - 'Alexa, tell \<invocation name\> to turn the volume up'
   - 'Alexa, tell \<invocation name\> to turn the volume down'
 - Verify that the volume increases/decreases.
-
-## Development Requirements
-
-- .NET Core 2.1 installed: https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-2.1.803-windows-x64-installer
 
 ## MQTT Message Format
 
