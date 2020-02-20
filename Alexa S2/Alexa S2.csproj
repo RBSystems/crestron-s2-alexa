@@ -12,7 +12,8 @@
     <PackageReference Include="MQTTnet.Extensions.ManagedClient" Version="3.0.8" />
     <Content Include="certs\**"> 
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> 
-    </Content> 
+    </Content>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" /> 
   </ItemGroup>
 
 </Project>

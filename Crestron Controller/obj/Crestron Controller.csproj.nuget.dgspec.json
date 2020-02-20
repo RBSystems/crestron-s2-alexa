@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj": {}
+    "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Crestron Controller\\Crestron Controller.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj": {
+    "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Crestron Controller\\Crestron Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj",
-        "projectName": "Alexa S2",
-        "projectPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\Alexa S2.csproj",
+        "projectUniqueName": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Crestron Controller\\Crestron Controller.csproj",
+        "projectName": "Crestron Controller",
+        "projectPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Crestron Controller\\Crestron Controller.csproj",
         "packagesPath": "C:\\Users\\Craig\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Alexa S2\\obj\\",
+        "outputPath": "C:\\Users\\Craig\\Documents\\crestron-s2-alexa\\Crestron Controller\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -40,24 +40,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "M2Mqtt": {
-              "target": "Package",
-              "version": "[4.3.0, )"
-            },
-            "MQTTnet": {
-              "target": "Package",
-              "version": "[3.0.8, )"
-            },
-            "MQTTnet.Extensions.ManagedClient": {
-              "target": "Package",
-              "version": "[3.0.8, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

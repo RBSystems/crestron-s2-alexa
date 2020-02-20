@@ -142,7 +142,10 @@ Once the AWS IoT Thing is created, the Alexa S2 App is built and running, the la
 
 Topic: *crestron*
 
-Payload: *\<command\>*
+Payload: *{
+  'cmd': \<command\>*,
+  'parameters': \<parameter string\>
+}
 
 ### Available commands
 - "volume_up" : Press and release the button used to increase the volume.

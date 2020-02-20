@@ -37,3 +37,4 @@ C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\obj\Debug\netcoreapp3.1\Alex
 C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\M2Mqtt.Net.dll
 C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\certs\AmazonRootCA1.crt
 C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\certs\bf1d861d1b-certificate.pem.crt.pfx
+C:\Users\Craig\Documents\crestron-s2-alexa\Alexa S2\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

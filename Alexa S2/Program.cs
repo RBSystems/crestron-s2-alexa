@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Crestron;
 using MQTT;
 
@@ -46,24 +45,37 @@ namespace Alexa_S2
 			// Do something with the data here
 		}
 
-		private static void MQTTDataHandler(string message)
+		private static void MQTTDataHandler(string msgJson)
 		{
-			Console.WriteLine("MQTT Message :");
+			MQTTMessage msg = new MQTTMessage();
+			msg.fromJson(msgJson);
 
-			if (message == "heartbeat")
+			Console.WriteLine("MQTT Message : {0}", msg);
+
+			if (msg.cmd == "heartbeat")
 			{
 				crestron.heartbeatRequest();
 			}
-			else if (message == "volume_up")
+			else if (msg.cmd == "volume_up")
 			{
 				volumeUp();
 			}
-			else if (message == "volume_down")
+			else if (msg.cmd == "volume_down")
 			{
 				volumeDown();
 			}
+			else if (msg.cmd == "volume_set")
+			{
+				volumeSet(Int32.Parse(msg.parameters));
+			}
 		}
 
+		private static void volumeSet(int volume_level)
+		{
+			// Send a connection request
+			Console.WriteLine("Sending Volume Set: {0} ...", volume_level);
+			// Add logic to increase/decrease volume to desired level
+		}
 		private static void volumeUp()
 		{
 			// Send a connection request

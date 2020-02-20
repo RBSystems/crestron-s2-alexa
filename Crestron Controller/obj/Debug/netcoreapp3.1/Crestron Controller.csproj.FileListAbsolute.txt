@@ -1,0 +1,11 @@
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\bin\Debug\netcoreapp3.1\Crestron Controller.exe
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\bin\Debug\netcoreapp3.1\Crestron Controller.deps.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\bin\Debug\netcoreapp3.1\Crestron Controller.runtimeconfig.json
+C:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\bin\Debug\netcoreapp3.1\Crestron Controller.runtimeconfig.dev.json
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\bin\Debug\netcoreapp3.1\Crestron Controller.dll
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\bin\Debug\netcoreapp3.1\Crestron Controller.pdb
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\obj\Debug\netcoreapp3.1\Crestron Controller.csprojAssemblyReference.cache
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\obj\Debug\netcoreapp3.1\Crestron Controller.AssemblyInfoInputs.cache
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\obj\Debug\netcoreapp3.1\Crestron Controller.AssemblyInfo.cs
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\obj\Debug\netcoreapp3.1\Crestron Controller.dll
+c:\Users\Craig\Documents\crestron-s2-alexa\Crestron Controller\obj\Debug\netcoreapp3.1\Crestron Controller.pdb

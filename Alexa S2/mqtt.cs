@@ -3,16 +3,41 @@ using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
-using System.Threading;
 using System.Text;
+using Newtonsoft.Json;
 
 
 namespace MQTT
 {
+    [Serializable]
     public class MQTTMessage
 	{
-		public string command { get; set; }
+		public string cmd { get; set; }
 		public string parameters { get; set; }
+
+        public MQTTMessage()
+        {
+            this.cmd = "";
+            this.parameters = "";
+        }
+        
+        public MQTTMessage(string command, string parameters)
+        {
+            this.cmd = command;
+            this.parameters = parameters;
+        }
+
+        public string toJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
+        public void fromJson(string json)
+        {
+            MQTTMessage msg = JsonConvert.DeserializeObject<MQTTMessage>(json);
+            this.cmd = msg.cmd;
+            this.parameters = msg.parameters;
+        }
 	}
 
     public class MQTTClient
